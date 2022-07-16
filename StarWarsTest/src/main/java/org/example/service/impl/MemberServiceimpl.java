@@ -19,7 +19,7 @@ public class MemberServiceimpl implements MemberService {
 
     @Override
     public Collection<Member> getAllMembers() {
-        return memrep.getAll();
+        return memrep.getAllMembers();
     }
 
     @Override
@@ -32,8 +32,8 @@ public class MemberServiceimpl implements MemberService {
         return memrep.createMember(member);
     }
 
-    @Override
+    /*@Override
     public void deleteAll() {
         memrep.deleteAll();
-    }
+    }*/
 }

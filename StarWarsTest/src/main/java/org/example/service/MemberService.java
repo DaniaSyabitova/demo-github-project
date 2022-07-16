@@ -10,7 +10,8 @@ public interface MemberService {
 
     public Member getMember(Member member);
     public Member createMember(Member member);
-    public void deleteAll();
+
+    //  public void deleteAll(); в базе однажды - в базе навсегда
 
 
 }

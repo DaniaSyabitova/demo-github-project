@@ -33,7 +33,7 @@ public class MemCon {
    /* @PostMapping
     public void deleteAll(@RequestBody Member member) {
        memberservice.deleteAll();
-    }*/
+    }*/    //в базе однажды - в базе навсегда
 
 
 }

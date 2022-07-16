@@ -5,16 +5,16 @@ import java.util.Collection;
 
 public interface MemberRepos {
 
-    Collection<org.example.domain.Member> getAll();
 
-
-
+    public Collection<Member> getAllMembers();
     public Member createMember(Member member);
 
+    public Member getMember(Member member);
 
 
-    public void deleteAll();
+
+  //  public void deleteAll(); в базе однажды - в базе навсегда
 
 
-    Member getMember(Member member);
+
 }

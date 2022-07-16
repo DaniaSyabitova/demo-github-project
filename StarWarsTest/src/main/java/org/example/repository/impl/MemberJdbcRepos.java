@@ -22,7 +22,7 @@ public class MemberJdbcRepos implements MemberRepos {
     }
 
     @Override
-    public Collection<Member> getAll() {
+    public Collection<Member> getAllMembers() {
         return jdbcTemplate.query("SELECT * FROM member", new RowMapper<Member>(){
             @Override
             public Member mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -33,14 +33,14 @@ public class MemberJdbcRepos implements MemberRepos {
 
     @Override
     public Member createMember(Member member) {
-        jdbcTemplate.update("INSERT INTO member(name, character) VALUES (?,?)");
+        jdbcTemplate.update("INSERT INTO member(name, character) VALUES (?,?)", member.getName() , member.getCharacter()  );
         return member;
     }
 
-    @Override
+  /*  @Override
     public void deleteAll() {
-        jdbcTemplate.update("DELETE FROM member");
-    }
+        jdbcTemplate.update("DELETE FROM member");   в базе однажды - в базе навсегда
+    }*/
 
     @Override
     public Member getMember(Member member) {
